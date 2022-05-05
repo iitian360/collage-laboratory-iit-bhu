@@ -364,7 +364,7 @@ body {
     width: 100%;
     background-color:black;
     display: flex;
-    align-items: flex-start;
+    align-items:center;
     justify-content:center;
     flex-direction: row;
     /* flex-wrap: wrap; */
@@ -381,6 +381,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .prof_img img {
@@ -389,6 +390,53 @@ body {
     /* border: 1px solid black; */
     box-shadow: rgba(250, 249, 249, 0.747) 0px 1px 2px, rgba(243, 243, 243, 0.523) 0px 2px 4px, rgba(179, 177, 177, 0.906) 0px 4px 8px, rgba(198, 198, 198, 0.888) 0px 8px 16px, rgba(113, 112, 112, 0.97) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
+
+
+.tag{
+    color: white;
+    margin:7px;
+    opacity: .8;
+    font-size: 17px;
+    padding: 0px 13px;
+}
+.name{
+    font-size: 30px;
+    padding: 4px 26px;
+    opacity: 1;
+    color: antiquewhite;
+    font-weight: 600;
+  }
+
+  .cont_btn{
+      text-decoration: none;
+      border: 1px solid white;
+      padding: 5px 14px;
+      color: white;
+      transition: 1s;
+      margin: 15px;
+  }
+  .cont_btn:hover{
+      transition: 1s all ease;
+      background-color: white;
+      color: black;
+  }
+  .cont_box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .cont_box img{
+  width:60%;
+  padding:0px 5px;
+  cursor: pointer;
+  transition: .5s;
+  }
+
+  .cont_box img:hover{
+      transition: .5s all ease;
+      transform:scale(1.6);
+  }
 
 /* .prof_img{
     width:100%;
@@ -406,7 +454,7 @@ body {
 /* FOOTER */
 
 footer {
-    background-color: rgb(10, 10, 10);
+    background-color:rgb(246, 112, 112);
 }
 
 .foot_box {

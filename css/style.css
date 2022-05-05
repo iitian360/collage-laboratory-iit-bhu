@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+/* font-family: 'Ubuntu', sans-serif; */
+
+/* ****************************   Navbar   ********************* */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    /* background-color:#fdf7a5; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; */
+}
+
+.sec_1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sec_2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 20%;
+    margin: 1px 3px;
+    cursor: pointer;
+}
+
+.quot {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin: 4px 3px;
+    text-shadow: 1px 4px 4.5px black;
+    color: rgb(211, 122, 6);
+
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0px 3px;
+}
+
+.nav_link {
+    margin: 0px 10px;
+
+}
+
+.nav_link a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 500;
+    opacity: .7;
+    font-size: 18px;
+    /* transition: .3s all ease-in-out; */
+}
+
+.nav_link a:hover {
+    animation-name: navbar;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    /* color: darkslategray; */
+}
+
+@keyframes navbar {
+    0% {
+        border-bottom: 3px solid rgb(248, 166, 79);
+
+    }
+
+    100% {
+        border-bottom: 3px solid rgb(246, 127, 0);
+        opacity: 1;
+
+    }
+}
+
+/******************************** Burger *************************/
+.burger {
+    background: inherit;
+    position: relative;
+    /* height: 5rem; */
+    width: 20px;
+    margin: 10px;
+    display: flex;
+    float: right;
+    align-items: flex-start;
+    justify-content: flex-end;
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.bar::before,
+.bar::after {
+    background-color: black;
+    position: absolute;
+    content: "";
+    transition: .5s;
+    height: inherit;
+    width: inherit;
+
+
+}
+
+.bar::before {
+    transform: translateY(-7px);
+}
+
+.bar::after {
+    transform: translateY(7px);
+}
+
+.burger.active .bar {
+    background: transparent;
+    transform: rotate(360deg);
+}
+
+.burger.active .bar::before {
+    transform: translateY(0) rotate(45deg);
+    background-color: red;
+}
+
+.burger.active .bar::after {
+    transform: translateY(0) rotate(-45deg);
+    background-color: red;
+}
+
+/* side bar */
+
+
+/* ***********************   container    ***************** */
+
+.container {
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.background {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/image/iit_bhu.jpg") no-repeat center/ cover;
+    /* background-blend-mode: darken; */
+}
+
+.back_layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(25, 25, 25, 0.626);
+}
+
+.content {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+
+.head {
+    font-size: 40px;
+    font-weight: 900;
+    margin: 3px 50px;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(200, 200, 200);
+
+}
+
+.active_animation {
+    animation: appear 4s 1 forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+.head span {
+    color: white;
+    text-shadow: 3px 2px 6px black;
+}
+
+.sec_text a {
+    color: rgb(240, 142, 29);
+    text-shadow: 1px 1px 3px black;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.active2 {
+    animation: appear2 4s 1 forwards;
+}
+
+
+
+@keyframes appear2 {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        color: rgb(240, 142, 29);
+    }
+
+}
+
+/* About us container */
+.about_container {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+
+}
+
+.abt_sec1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.abt_sec2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    height: 70%;
+    margin: 20px;
+
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+
+.abt_sec2 img {
+    width: 100%;
+    /* height: 100%; */
+
+}
+
+.head_txt {
+    color: rgb(4, 190, 190);
+    opacity: .8;
+}
+
+.btn {
+    background-color: rgb(4, 190, 190);
+    border: none;
+    border-radius: 17px;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    opacity: .7;
+    transition: .3s all ease;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+/* universal */
+
+.center {
+    text-align: center;
+}
+
+.airticle {
+    margin: 20px 80px;
+    font-size: large;
+    color: white;
+
+}
+
+/*  alumini**************8 */
+
+.alumini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    flex-direction: column;
+    /* cursor: pointer; */
+}
+
+.alm_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* width: 100%; */
+
+}
+.professor{
+    width: 100%;
+    background-color:black;
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+.prof_img{
+    width: 40%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  
+}
+.prof_cv{
+    width:60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prof_img img {
+    max-width: 100%;
+    margin: 10px 10px;
+    /* border: 1px solid black; */
+    box-shadow: rgba(250, 249, 249, 0.747) 0px 1px 2px, rgba(243, 243, 243, 0.523) 0px 2px 4px, rgba(179, 177, 177, 0.906) 0px 4px 8px, rgba(198, 198, 198, 0.888) 0px 8px 16px, rgba(113, 112, 112, 0.97) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+/* .prof_img{
+    width:100%;
+    position: relative;
+    height:70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/image/subject.jpg") no-repeat 50% 20%/ cover;
+    background-size: cover;
+    /* height: 100%; */
+/* overflow: hidden;  */
+/* } */
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(10, 10, 10);
+}
+
+.foot_box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.footitem {
+    margin: 5px 20px;
+    list-style: none;
+}
+
+.foot_link img {
+    width: 60%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.foot_link img:hover {
+    transition: 1s all ease;
+    transform: rotate(360deg);
+
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    padding: 0px 5px;
+}
+
+.link a:hover {
+    transition: .5s;
+    color: rgb(44, 22, 246);
+}
+
+
+/********************** video section ***************************/

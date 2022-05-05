@@ -493,4 +493,11 @@ footer {
 }
 
 
-/********************** video section ***************************/
+/**********************LABORATORY SECTION ***************************/
+
+.laboratory{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}

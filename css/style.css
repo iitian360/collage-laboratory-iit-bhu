@@ -500,4 +500,25 @@ footer {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: orange;
+  z-index: 1;
+}
+
+.lab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    margin: 8px 10px;
+    z-index: 5;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.lab_item{
+    list-style: none;
+}
+.lab_head{
+    font-size: 19px;
+    font-weight: 600;
+    opacity: .6;
 }

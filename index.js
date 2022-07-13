@@ -3,8 +3,7 @@ window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     if (document.documentElement.scrollTop > 80) {
-        document.getElementById("bar").style = "background: darkslategray";
-
+        document.getElementById("bar").style = "background: #141E30"
     } else {
         document.getElementById("bar").style = "background:inherit";
 
